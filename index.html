@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio | Project Showcase</title>
+  <link rel="stylesheet" href="indexs.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="logo">DevPortfolio<span>.</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        ☰
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+        ☀️ Light
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Your Name</h1>
+        <p class="subtitle">
+          Frontend & Web Developer building responsive, accessible, and modern web applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me & Credentials</h2>
+        <div class="about-grid">
+          <p>
+            I am a passionate developer focused on clean UI engineering, modern JavaScript,
+            and structured problem solving. Currently completing technical milestones and
+            building real-world portfolio projects.
+          </p>
+          <div class="credentials-card">
+            <h3>Resume & Highlights</h3>
+            <ul>
+              <li><strong>Education / Program:</strong> Computer Science & Web Development</li>
+              <li><strong>Focus:</strong> Responsive Web Apps, REST APIs, UI/UX</li>
+              <li><strong>Resume:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Grid -->
+    <section id="skills" class="section alt-bg">
+      <div class="container">
+        <h2 class="section-title">Tech Stack & Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">HTML5 & Semantic Markup</div>
+          <div class="skill-card">CSS3, Flexbox & Grid</div>
+          <div class="skill-card">JavaScript (ES6+)</div>
+          <div class="skill-card">Git & GitHub</div>
+          <div class="skill-card">REST APIs</div>
+          <div class="skill-card">Responsive Design</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Task Manager App</h3>
+            <p>Interactive CRUD productivity tracker with persistent browser storage.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <button
+              class="btn btn-small open-modal"
+              data-title="Task Manager App"
+              data-desc="A task tracker supporting create, edit, filter, and delete actions saved locally in the browser."
+              data-tech="HTML5, CSS3, JavaScript (ES6+)"
+              data-repo="https://github.com"
+              data-live="#"
+            >
+              Project Details
+            </button>
+          </article>
+
+          <article class="project-card">
+            <h3>Weather Telemetry App</h3>
+            <p>Real-time weather forecast interface with API integration and error handling.</p>
+            <div class="project-tags">
+              <span>REST API</span><span>Async JS</span><span>UI</span>
+            </div>
+            <button
+              class="btn btn-small open-modal"
+              data-title="Weather Telemetry App"
+              data-desc="Fetches live weather metrics asynchronously with clean loading and error states."
+              data-tech="HTML5, CSS Grid, Fetch API"
+              data-repo="https://github.com"
+              data-live="#"
+            >
+              Project Details
+            </button>
+          </article>
+
+          <article class="project-card">
+            <h3>E-Commerce Catalog</h3>
+            <p>Product listing with interactive cart state and quantity calculations.</p>
+            <div class="project-tags">
+              <span>State</span><span>Cart UI</span><span>Responsive</span>
+            </div>
+            <button
+              class="btn btn-small open-modal"
+              data-title="E-Commerce Catalog"
+              data-desc="Showcase grid featuring item quantity updates, subtotal calculation, and slide-out cart drawer."
+              data-tech="HTML5, CSS3, JavaScript"
+              data-repo="https://github.com"
+              data-live="#"
+            >
+              Project Details
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section alt-bg">
+      <div class="container contact-box">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>Open to internship opportunities, collaborations, and technical feedback.</p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com" class="btn btn-primary">Email Me</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Modal Popup -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close Modal">×</button>
+      <h3 id="modalTitle">Project Title</h3>
+      <p id="modalDesc">Project description goes here.</p>
+      <p><strong>Tech Stack:</strong> <span id="modalTech"></span></p>
+      <div class="modal-links">
+        <a id="modalRepo" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-small">GitHub Repo</a>
+        <a id="modalLive" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">Live Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
